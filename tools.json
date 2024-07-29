@@ -1,0 +1,114 @@
+{
+  "tools": {
+    "customer_id_tool": {
+      "name": "get_customer_id",
+      "description": "get the customer_id of the user to check all queries against",
+      "args": [],
+      "required_args": []
+    },
+    "order_tool": {
+      "name": "get_order_status",
+      "description": "get the status of an order using the given order_id that the user asks for",
+      "args": [
+        [
+          "order_id",
+          "string",
+          "the id of the order to check"
+        ],
+        [
+          "customer_id",
+          "string",
+          "the id of the customer"
+        ]
+      ],
+      "required_args": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    "order_id_tool": {
+      "name": "get_order_id",
+      "description": "asks the user for a specific order_id when the user asks about the status of their order",
+      "args": [],
+      "required_args": []
+    },
+    "human_representative_tool": {
+      "name": "get_human_representative",
+      "description": "asks the user for there contact information when they request to speak to a human representative",
+      "args": [],
+      "required_args": []
+    },
+    "contact_info_tool": {
+      "name": "get_contact_info",
+      "description": "gets the contact information of a user who wants to speak with a human representative the contact information is comprised of a full name email and phone number",
+      "args": [
+        [
+          "full_name",
+          "string",
+          "the first and last name of the user"
+        ],
+        [
+          "email",
+          "string",
+          "the email the user"
+        ],
+        [
+          "phone_number",
+          "string",
+          "the phone number of the user"
+        ]
+      ],
+      "required_args": [
+        "full_name",
+        "email",
+        "phone_number"
+      ]
+    },
+    "get_return_policy_for_product_tool": {
+      "name": "get_return_policy_for_product",
+      "description": "asks the user for the name or type or order_ID of the product to check the return policy",
+      "args": [],
+      "required_args": []
+    },
+    "get_order_product_type_tool": {
+      "name": "get_order_product_type",
+      "description": "gets the product type of an order using the given order_id and customer_id",
+      "args": [
+        [
+          "order_id",
+          "string",
+          "the id of the order to check"
+        ],
+        [
+          "customer_id",
+          "string",
+          "the id of the customer"
+        ]
+      ],
+      "required_args": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    "get_refund_policy_tool": {
+      "name": "get_refund_policy",
+      "description": "payment_type and payment_value to determine the way to refund and how mach to refund",
+      "args": [
+        [
+          "order_id",
+          "string",
+          "the id of the order to check"
+        ],
+        [
+          "customer_id",
+          "string",
+          "the id of the customer"
+        ]
+      ],
+      "required_args": [
+        "order_id",
+        "customer_id"
+      ]
+    }
+  }
+}
